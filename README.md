@@ -4,7 +4,7 @@ Projeto feito no módulo do curso Node + Typescript -> b7web
 
 Ferramentas: TypeScript, express, mustache
 
-Use: MVC
+Used: MVC
 
 ### Pré-requisitos globais
 

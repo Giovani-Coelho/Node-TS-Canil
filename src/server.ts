@@ -11,11 +11,14 @@ dotenv.config()
 const server = express()
 
 server.set("view engine", "mustache")
+
 // fala onde estao os arquivos dinamicos
 server.set("views", path.join(__dirname, "views"))
 // O método path.join() une os segmentos de caminho especificados em um caminho.
+
 server.engine("mustache", mustache())
 // define qual a engine esta sendo usada
+
 //arquivos estaticos:
 server.use(express.static(path.join(__dirname, "../public")))
 
@@ -24,7 +27,7 @@ server.use(express.static(path.join(__dirname, "../public")))
 server.use(mainRoutes)
 
 server.use((req, res) => {
-  res.send("pagina nao encontrada")
+  res.render("pages/404")
 })
 
 server.listen(process.env.PORT)
